@@ -7,7 +7,7 @@
 </head>
 <body>
     <font size = "2" face = "Arial">
-    <form action="#" enctype="utf-8" method = "GET">
+    <form action="index.html" enctype="utf-8" method = "GET">
         <table align="center" cellpadding = "20">
             <tr>
             <td>    <label for="fName">User Name: </label> </td> 
@@ -23,7 +23,7 @@
     
             <td>
                 <input type="email" id="email" name="email" placeholder="example@mail.com" 
-                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
             </td>
         
         <tr>
@@ -32,14 +32,12 @@
             </td>
             <td>
                 <input type="password" id="password" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" requireds>
             </td> 
         
         </tr>
         </tr>
-            <td>
-                <button onclick="window.location.href = 'index.html'">Sign in</button>
-            </td>
+        <td colspan="2"><input type="submit" value="Submit"></td>
         </tr>
         <tr>
             <td>
