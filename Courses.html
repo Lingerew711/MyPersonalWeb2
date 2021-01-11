@@ -1,95 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="icon" href="./image/hacker.GIF">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+   <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<br>
-<table  bgcolor = "white" width = "100" align = "center">
-    <tr>
-        <td>
-<table frame = "below" width = "100%" >
-    <tr>
-        <td>
-            <a href="index.html"><img src="./image/kido.jpg" alt="profile picture" hspace = "16" ></a>
-        </td>
-        <th >
-            <font size = "3" face = "Verdana">
-            <a href="index.html">Linge.Dana</a></font></th>
-        <td>
-        <ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul><ul>
-                <form action="">
-                   <td><ul> 
-                       <label for="search"></label>
-                    </ul>
-                   </td>
-                   <td>
-                       <input type="search" id="search" name="search">
-                   </td>
-                   <td> <select id="search box">
-                           <option value="volvo">Search this site</option>
-                           <option value="saab">Search web</option>
-                           <option value="opel">Configure search options</option>
-                       </select>
-                   </td>
-               </form>
-        </ul></ul></ul></ul></ul></ul> </ul></ul></ul></ul></ul></ul>
-        </td>
-        </tr>
-</table>
-<body bgcolor="#999999" >
-    <table cellspacing = "2" aria-rowspan="1" >
-        <tr>
-            <td> <br>
-            &nbsp;&nbsp;&nbsp;<font size="1" face = "Verdana">se.lingerew.getie@gmail..<br>
-            &nbsp;&nbsp;&nbsp;this.is.my.email.adress.....</font> <br>
-            <table frame = "hsides">&nbsp;&nbsp;
-                <tr>
-                    <td>
+<style type="text/css">
+  .col{
+    background-color: red;
+    border: 1px solid;
+    height: 100vh;
+  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
 
-                    <font size = "2" face = "Verdana" >
-                        &nbsp;&nbsp;<a href="index.html"><font color = "blue">Home</font></a><br>
-                        &nbsp;&nbsp;<a href="Aboutme.html"><font color = "blue">About Me</font></a><br>
-                        <a href="Courses.html"> <img src="./image/3.png" alt=""> </a><br>
-                        &nbsp;&nbsp;<a href="./image/CV.pdf" target="_blank" ><font color = " blue">Curriculum Vitae</font></a><br>
-                    </font>
-            </td>
-            </tr>
-            
-            </table>
-           
-            </td>
-            
-            <td rowspan="1000">
-                <table frame = "lhs" cellpadding = "10" width = "100" >
-                    <tr>
-                        <td>
-                            <pre>
-                        <font face = "verdana" size "4" ><b>
-COURSES THAT I TAKE NOW </b></font>
-<font size = "2" face = "Arial" >
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+img{
+  height: 80px;
+  /*padding-left: 100px;
+  padding-top: 25px;*/
+}
+a{
+  display: block;
+}
+</style>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-2 fixed-top one">
+      <img src="./image/hera.JPG"><br>
+      <a href="index.html">Home</a>
+      <a href="Aboutme.html">About Me</a>
+      <a href="#">Courses</a>
+      <a href="./image/CV.pdf">Curriculum Vitea</a>
+    </div>
+    <div class="col-sm-8 offset-sm-2 two">
+        COURSES THAT I TAKE NOW 
+
     This is the description and objective of courses that are given by Center of Information Technology and Scintific 
     Cmputation for second year second semester students. Since currently I am second year second semester software engineering
-    student I am interested to describe these courses.</font>
+    student I am interested to describe these courses.
 
-    <b><font size ="4" face = "Arial">
-    FUNDAMENTALS OF NETWORKING</font></b>
-    <font size = "3" face = "Arial" >
-    <b>Course Description:</b></font> 
-    <font size = "2" face = "Arial" >                        
+    
+    FUNDAMENTALS OF NETWORKING
+    
+    Course Description: 
+                            
         This course introduces the architecture, structure, functions, components, and models of computer networks. 
         It presents the OSI model and TCP/IP suite of protocols, network topologies, Ethernet concepts, principles and 
         structure of IP addressing, subnet masking, networking components, and basic network design to provide a foundation
         for the networking technology. The practical aspect deals with; Cabling and crimping, Configuring TCP/IP, Peer 
         to Peer Networking, Sharing Files, Sharing Printers, Client Server Networking, Steps for Creating a home or small 
         office Network, Experiencing collaboration tools, installing & Configuring Network Operating System, Exploring S
-        erver Roles, Setting up a DNS Server, setting up a DHCP server, Domain controller and IP Addressing. </font>
-        <font size = "3" face = "Arial" >                           
-    <b>Course Objective </b> </font>  
+        erver Roles, Setting up a DNS Server, setting up a DHCP server, Domain controller and IP Addressing. 
+                                   
+    Course Objective    
 
-    <font size = "2" face = "Arial" >
+    
         This course first introduces the fundamental building blocks that form a modern network, such as protocols, 
         topologies, hardware, and network operating systems. It then provides in-depth coverage of the most important 
         concepts in contemporary networking, such as TCP/IP, Ethernet, wireless transmission, and security. The course will prepare students to 
@@ -109,14 +93,14 @@ COURSES THAT I TAKE NOW </b></font>
                     • Build a simple Ethernet network using routers and switches. 
                     • Use IOS CLI commands to perform basic router and switch configuration and verification. 
                     • In addition, the course provides instruction and training in the proper care, maintenance, and use of networking software, 
-                        tools, and equipment. </font>
-                        <b><font size ="4" face = "Arial">
+                        tools, and equipment. 
+                        
 
-    MOBLIE PROGAMMING</font></b>
+    MOBLIE PROGAMMING
 
-    <font size = "3" face = "Arial" >
-    <b>Course Description:</b></font> 
-    <font size = "2" face = "Arial" >
+    
+    Course Description: 
+    
             Although they have only become widely used in the past few years, mobile devices have already had a tremendous impact on our culture 
             and its social dynamics. Recent rapid growth in the mobile device market has not been primarily driven by voice communications, but rather by the
             limitless ways in which these devices may be used to explore our local environments. These new communicative modes are expressed through 
@@ -124,22 +108,22 @@ COURSES THAT I TAKE NOW </b></font>
             augment a user’s understanding of her environment. This course operates in two distinct but related modes: development, wherein an app is made
             functional; and design, through which an app is made usable. Students will be expected to consider both modes when producing their apps. 
             Students will work throughout the semester to produce a compelling app of interest to the UNC community.
-        </font>
-            <font size = "3" face = "Arial" >                           
-    <b>Course Objective </b> </font>
-    <font size = "2" face = "Arial" >
+        
+                                       
+    Course Objective  
+    
                     • Produce apps for iOS platform devices (iPhone/iPad/iPod Touch)
                     • Gain a basic understanding of computer architecture and object-oriented programming
                     • Develop a working knowledge of Apple’s Xcode app development tool
                     • Understand mobile design principles
                     •Identify need and opportunity in app markets
-                </font>
-                    <b><font size ="4" face = "Arial">
-    FUNDAMENTALS OF WEB DESIGN AND DEVELOPMENT</font></b> 
+                
+                    
+    FUNDAMENTALS OF WEB DESIGN AND DEVELOPMENT 
 
-    <font size = "3" face = "Arial" >
-    <b>Course Description:</b></font> 
-    <font size = "2" face = "Arial" >
+    
+    Course Description: 
+    
             This course provides a comprehensive overview of website development. Students explore the prevailing vocabulary, tools, and standards 
             used in the field and learn how the various facets including HTML5, XHTML, CSS, JavaScript, Ajax, multimedia, scripting languages, 
             HTTP, clients, servers, and databases function together in today's web environment. The course provides a solid web development foundation, 
@@ -148,10 +132,10 @@ COURSES THAT I TAKE NOW </b></font>
             languages, and database access will be discussed. Software and services that are easily incorporated into a website (for example, maps, checkout, 
             blogs, content management) are surveyed and discussed. Students produce an interactive website on the topic of their choice for the final project 
             and leave the course prepared for more advanced and focused web development studies
-        </font>
-            <font size = "3" face = "Arial" >                           
-    <b>Course Objective </b> </font>
-    <font size = "2" face = "Arial" >
+        
+                                       
+    Course Objective  
+    
                     • Up on the completion of this course students should :
                     • Understand the concept of Web Application Development and its Architecture.
                     • Understand the Essentials of Web Application Development
@@ -159,13 +143,13 @@ COURSES THAT I TAKE NOW </b></font>
                     • Understand and practice embedded dynamic scripting on client side 
                     • Understand how server side technologies work 
                     •understand the differences between client side & server side technologies
-                </font>
-    <b><font size ="4" face = "Arial">
-    SOFTWARE ENGINEERING</font></b>
+                
+    
+    SOFTWARE ENGINEERING
 
-    <font size = "3" face = "Arial" >
-    <b>Course Description:</b></font> 
-    <font size = "2" face = "Arial" >
+    
+    Course Description: 
+    
             Software Engineering (SE) comprises the core principles consistent in software construction and maintenance: fundamental software processes 
             and life-cycles, mathematical foundations of software engineering, requirements analysis, software engineering methodologies and standard 
             notations, principles of software architecture and re-use, software quality frameworks and validation, software development, and maintenance 
@@ -173,10 +157,10 @@ COURSES THAT I TAKE NOW </b></font>
             interpretation of requirements and use case documents into code; application of design notation in UML and use of commonly-used design patterns.
             Current industry-strength programming languages, technologies and systems feature highly in the practical components, electives and projects 
             of the course, but they are also taught with a view to understanding and applying principles underlying their more ephemeral character. 
-        </font>
-            <font size = "3" face = "Arial" >                           
-    <b>Course Objective </b> </font>
-    <font size = "2" face = "Arial" >
+        
+                                       
+    Course Objective  
+    
                     • Knowledge of basic SW engineering methods and practices, and their appropriate application.
                     • Describe software engineering layered technology and Process frame work.
                     • A general understanding of software process models such as the waterfall and evolutionary models.
@@ -190,13 +174,13 @@ COURSES THAT I TAKE NOW </b></font>
                     • Describe software measurement and software risks.
                     • Understanding of software evolution and related issues such as version management.
                     • Understanding on quality control and how to ensure good quality software. 
-                </font>
-                    <b><font size ="4" face = "Arial">
-    COMPUTER GRAPHICS AND MULTIMEDIA</font></b>
+                
+                    
+    COMPUTER GRAPHICS AND MULTIMEDIA
 
-    <font size = "3" face = "Arial" >
-    <b>Course Description:</b></font> 
-    <font size = "2" face = "Arial" > 
+    
+    Course Description: 
+     
         The area of multimedia includes a wide variety of data. In this module we will deal with pictures, animation, audio and 3D landscapes. 
         Images are built out of pixels. Each pixel has a certain color or grey tone. Handling images on this level will allow us to analyse and 
         manipulate images. On the practical side we will program effects in Java. For bringing images to life, e.g. for animation, we will use 
@@ -206,10 +190,10 @@ COURSES THAT I TAKE NOW </b></font>
         will be the focus here. In the last part of this module we will create virtual landscapes using Java 3D. Apart from the basic concepts 
         these landscapes contain different forms of lighting and lighting effects, moving objects and objects with different behaviors 
         (e.g collision behaviors). The main computer language for this module is Java including Java3D.
-    </font>
-        <font size = "3" face = "Arial" >                           
-    <b>Course Objective </b> </font>
-    <font size = "2" face = "Arial" > 
+    
+                                   
+    Course Objective  
+     
         Students will:
 
                     • formulate a working definition of interactive multimedia;
@@ -219,52 +203,8 @@ COURSES THAT I TAKE NOW </b></font>
                     • use basic instructional design principles in the development of stacks;
                     • develop conceptual maps of content and process for interactive multimedia instructional programs
                     
-                                                    
-                    </font> </pre>   
-                                    <br>
-                            </ul>
-
-                        </td>
-                    </tr>
-                    
-              </table>
-            </td>
-
-        </tr>
-       
-        <tr>
-            <td rowspan="10px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;</td>
-            
-        </tr>
-        
-    </table>
-</body> 
-<hr>
-</td>
-</tr>
-</table>
-<footer>
-    
-    <ul><ul><ul><ul><ul> <ul><ul><ul><ul>
-    <table >
-        
-        <font size = "1" face = "Verdana" color = "lightgray" >
-            <tr> <a href="signin.html"> <font color = "lightgray" >Sign in</font> </a></tr> 
-            <font color = "black"> |</font>
-            <tr> <a href="siteactivity.html"><font color = "lightgray" >Recent Site Activity</font></a></tr> 
-            <font color = "black"> |</font>
-            <tr> <a href="radio.html"><font color = "lightgray" > Report Abuse</font></a></tr> 
-            <font color = "black"> |</font>
-            <tr><a href="javascript:window.print()"><font color = "lightgray" >Print Page</font></a></tr>
-            <font color = "black"> |</font>
-            <tr>Powerd By <a href="https://sites.google.com/view/linge/home">Google Sites</a> </tr>
-        </font>
-        </tr>
-    
-    </table>
-</ul></ul></ul></ul></ul></ul> </ul></ul>
-</footer>
+    </div>
+  </div>
+</div>
+</body>
 </html>
