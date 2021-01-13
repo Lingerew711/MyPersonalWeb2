@@ -1,98 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-   <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<style type="text/css">
-  .col{
-    background-color: red;
-    border: 1px solid;
-    height: 100vh;
-  }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingerew Getie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+     
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Toggle Styles */
+
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #000;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+
+        /* Sidebar Styles */
+
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #999999;
+        }
+
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+
+        .sidebar-nav>.sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+
+        .sidebar-nav>.sidebar-brand a {
+            color: #999999;
+        }
+
+        .sidebar-nav>.sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+
+        @media(min-width:1000px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+
+            #sidebar-wrapper {
+                width: 250px;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+.search-container {
+  float: right;
 }
 
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+ input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+ .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: rgb(255, 255, 255);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 100px) {
+   .search-container {
+    float: none;
+  }
+   a,  input[type=text],  .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
 }
 img{
-  height: 80px;
-  /*padding-left: 100px;
-  padding-top: 25px;*/
+    height: 60px;
+    width: 60px;
 }
-a{
-  display: block;
+.lin{
+    margin-top:70px;
 }
-</style>
+@media screen and (min-width: 992px) {
+      .info {
+        
+              margin-left: 20px;
+              margin-bottom: 20px;
+            }
+
+
+
+.info{
+  margin-left: 270px;
+ margin-bottom: 50px;
+}
+    </style>
+
+</head>
+
 <body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2 col-2 fixed-top one">
-      <img src="./image/hera.JPG"><br>
-      <a href="#">Home</a>
-      <a href="Aboutme.html">About Me</a>
-      <a href="Curses.html">Courses</a>
-      <a href="./image/CV.pdf">Curriculum Vitea</a>
-    </div>
-    <div class="col-sm-8 offset-sm-2 two">Current Positions
-Currently I Am
-▪ Engineering Student at AAiT
-The AAiT (Formerly the College of Engineering) was established in 1953 by the Ministry of Education of Ethiopia, and was housed in a set of building in the compound of
-School of Addis Ababa. Initially, only a two year program of Intermediate Engineering studies was offered and students were subsequently sent abroad for the completion
-of the student leading to a Bachelor of Science degree (B.Sc).
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  sticky-top d-block d-sm-block d-md-block d-lg-none">
+        
+            <button class="btn btn-default" id="menu-toggle" type="button" data-toggle="collapse" data-target="#colNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-Extra Curricular Skills
+                <span class="navbar-toggler-icon"></span>
+          
+           </button>
+           <a class="navbar-brand" href="index.html">
+            <img src="./image/kido.JPG"> Linge G.
+          </a>
+      
+    
+        <div class="search-container sticky-top">
+            <form action="/action_page.php">
+              
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+       
+    </nav>
 
-In addition to my accadamic achivments I have the following skills that I own throgh hard working
-▪ Goal keeper in football game
-▪ Programm leader in meetings
-▪ Advanced in electronic creativity works
-▪ Motivation speaker
-▪ Leadership skill
-Courses That I Have Taken Throgh My AAiT Life
+    <div id="wrapper">
+        <div class="search-container sticky-top d-none d-sm-none d-md-none d-lg-block">
+            <form action="/action_page.php">
+              
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="sidebar-nav  d-lg-block" >
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./image/kido.JPG">
+                      </a>
+                     <a href="">Linge G.</a> 
+                      
+                </li>
+                <div class="lin">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="Aboutme.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="Courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="#">Curriculum Vitea</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-I am studying Software Engineering in center of ITSC(Information Technology and Scientific Computing). In ITSC I have learned the following
-courses throgh two years life time.
-🔽 First Year Second Semester
-▪ Introduction to Python Programming
-▪ Fundamentals of Information Technology
-▪ Fundamentals of Electric Circuit
-🔽 Second Year First Semester
-▪ OOP(Object Oriented Programming)
-▪ Fundamentals of Electronics
-▪ Discrete Mathematics
-▪ Datastructure and Algorithms
-▪ Fundamentals of Database
-🔽 Second Year Second Semester
-▪ Web Design and Development
-▪ Mobile Programming
-▪ Graphics and Multimedia
-▪ Fundamentals of Networking
-▪ Sofware Engineering
-Note: For first year first semester all AAiT students take the same caurses called "Pre-Engineering Common Courses". ,
-This is why I am not mentioned first year first semester courses thar are given bt ITSC. Students in ITSC take 5 courses every semester.
-In first year second semester two courses are given by other staffs and like that of pre-engineering courses I haven't mention them.
+        <!-- Page Content -->
 
+        <div>Currently I Am</div>              
+                <ul> ▪ Engineering Student at AAiT</ul>
+                <div>
+                  The AAiT (Formerly the College of Engineering) was established in 1953 by the Ministry of Education of Ethiopia,
+                and was housed in a set of building in the compound of School of Addis Ababa. Initially, only a two year
+                program of Intermediate Engineering studies was offered and students were subsequently sent abroad for the completion
+                of the student leading to a Bachelor of Science degree (B.Sc).
+                </div>
+          <div>Extra Curricular Skills</div>
+            
+              <div>
+               In addition to my accadamic achivments I have the following skills that I own throgh hard working 
+               <ul>▪ Goal keeper in football game </ul>
+               <ul>▪ Programm leader in meetings </ul>
+               <ul>▪ Advanced in electronic creativity works </ul>
+               <ul>▪ Motivation speaker </ul>
+               <ul>▪ Leadership skill </ul>
+              </div>
+              <div>Courses That I Have Taken Throgh My AAiT Life</div>
+            
+              <div>
+                I am studying Software Engineering in center of ITSC(Information Technology and Scientific Computing). 
+               In ITSC I have learned the following courses throgh two years life time.
+              </div>
+               <ul>🔽 First Year Second Semester
+                   <ul>▪ Introduction to Python Programming</ul>
+                   <ul>▪ Fundamentals of Information Technology</ul>
+                   <ul>▪ Fundamentals of Electric Circuit</ul>
+               </ul>
+               <ul>🔽 Second Year First Semester
+                   <ul>▪ OOP(Object Oriented Programming)</ul>
+                   <ul>▪ Fundamentals of Electronics</ul>
+                   <ul>▪ Discrete Mathematics</ul>
+                   <ul>▪ Datastructure and Algorithms</ul>
+                   <ul>▪ Fundamentals of Database</ul>
+               </ul>
+               <ul>🔽 Second Year Second Semester
+                   <ul>▪ Web Design and Development</ul>
+                   <ul>▪ Mobile Programming</ul>
+                   <ul>▪ Graphics and Multimedia</ul>
+                   <ul>▪ Fundamentals of Networking</ul>
+                   <ul>▪ Sofware Engineering</ul>
+               </ul>
+            <div>
+              Note: For first year first semester all AAiT students take the same caurses called "Pre-Engineering Common Courses".
+             This is why I am not mentioned first year first semester courses thar are given bt ITSC.
+            Students in ITSC take 5 courses every semester.In first year second semester two courses are given by other staffs and like that of pre-engineering courses I haven't mention them.
+            </div>
+    <!-- /#wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
 
-A secondary passion.</div>
-  </div>
-</div>
 </body>
+<div class="info fixed-bottom">
+  <button type="button" class="btn bg-light"><i class="fa fa-info-circle"></i></button>
+</div>
+
 </html>

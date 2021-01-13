@@ -1,68 +1,298 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-   <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<style type="text/css">
-  .col{
-    background-color: red;
-    border: 1px solid;
-    height: 100vh;
-  }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingerew Getie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat&display=swap');
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Toggle Styles */
+
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #000;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+
+        /* Sidebar Styles */
+
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #999999;
+        }
+
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+
+        .sidebar-nav>.sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+
+        .sidebar-nav>.sidebar-brand a {
+            color: #999999;
+        }
+
+        .sidebar-nav>.sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+
+        @media screen and (min-width:992px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+
+            #sidebar-wrapper {
+                width: 250px;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+.search-container {
+  float: right;
 }
 
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+ input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+ .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: rgb(255, 255, 255);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 100px) {
+   .search-container {
+    float: none;
+  }
+   a,  input[type=text],  .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  
 }
 img{
-  height: 80px;
-  /*padding-left: 100px;
-  padding-top: 25px;*/
+    height: 60px;
+    width: 60px;
 }
-a{
-  display: block;
+.lin{
+    margin-top:70px;
 }
-</style>
-<body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2 col-2 fixed-top one">
-      <img src="./image/hera.JPG"><br>
-      <a href="index.html">Home</a>
-      <a href="#">About Me</a>
-      <a href="Courses.html">Courses</a>
-      <a href="./image/CV.pdf">Curriculum Vitea</a>
-    </div>
-    <div class="col-sm-8 offset-sm-2 two">About Me
-Some facts
+@media screen and (min-width: 992px) {
+      .info {
+        
+              margin-left: 20px;
+              margin-bottom: 20px;
+            }
 
-My full name is Lingerew Getie Alemahu
-I am the last child in the family
-I was born in May 20, 2000
-I was born in countryside and grow up there
-I love to listen music
-I used to play in a goalkeeper positon in football game
-I like video game
-I have 1 sister and 6 brother</div>
-  </div>
-</div>
+
+
+.info{
+  margin-left: 270px;
+ margin-bottom: 50px;
+}
+.h{
+  text-align: center;
+  padding: 100px;
+  font-size: 45pt;
+  font-family: 'Lato', sans-serif;
+ font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  sticky-top d-block d-sm-block d-md-block d-lg-none">
+        
+            <button class="btn btn-default" id="menu-toggle" type="button" data-toggle="collapse" data-target="#colNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+          
+           </button>
+           <a class="navbar-brand" href="index.html">
+            <img src="./image/kido.JPG"> Linge G.
+          </a>
+    
+        <div class="search-container sticky-top">
+            <form action="/action_page.php">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="search-container sticky-top d-none d-sm-none d-md-none d-lg-block">
+            <form action="/action_page.php">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="sidebar-nav  d-lg-block" >
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./image/kido.JPG">
+                      </a>
+                     <a href="">Linge G.</a> 
+                      
+                </li>
+                <div class="lin">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Me</a>
+                    </li>
+                    <li>
+                        <a href="Courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="#">Curriculum Vitea</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+
+        <div>
+         <div class="h">About Me</div>
+
+<ul>
+  Some facts
+
+                                        <ol>
+                                    <li> My full name is Lingerew Getie Alemahu</li>
+                                    <li> I am the last child in the family</li>
+                                    <li> I was born in May 20, 2000</li>
+                                    <li> I was born in countryside and grow up there</li>
+                                    <li> I love to listen music</li>
+                                    <li> I used to play in a goalkeeper positon in football game </li>
+                                    <li> I like video game</li>
+                                    <li> I have 1 sister and 6 brother</li>
+                                    
+
+                                </ol>
+                                </ul>
+        </div>
+    <!-- /#wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
 </body>
+<div class="info fixed-bottom">
+  <button type="button" class="btn bg-light"><i class="fa fa-info-circle"></i></button>
+</div>
+
 </html>
