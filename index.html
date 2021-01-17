@@ -2,320 +2,168 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lingerew Getie</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-     
-
-        body {
-            overflow-x: hidden;
-        }
-
-        /* Toggle Styles */
-
-        #wrapper {
-            padding-left: 0;
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-        }
-
-        #wrapper.toggled {
-            padding-left: 250px;
-        }
-
-        #sidebar-wrapper {
-            z-index: 1000;
-            position: fixed;
-            left: 250px;
-            width: 0;
-            height: 100%;
-            margin-left: -250px;
-            overflow-y: auto;
-            background: #000;
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-        }
-
-        #wrapper.toggled #sidebar-wrapper {
-            width: 250px;
-        }
-
-        #page-content-wrapper {
-            width: 100%;
-            position: absolute;
-            padding: 15px;
-        }
-
-        #wrapper.toggled #page-content-wrapper {
-            position: absolute;
-            margin-right: -250px;
-        }
-
-        /* Sidebar Styles */
-
-        .sidebar-nav {
-            position: absolute;
-            top: 0;
-            width: 250px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .sidebar-nav li {
-            text-indent: 20px;
-            line-height: 40px;
-        }
-
-        .sidebar-nav li a {
-            display: block;
-            text-decoration: none;
-            color: #999999;
-        }
-
-        .sidebar-nav li a:hover {
-            text-decoration: none;
-            color: #fff;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .sidebar-nav li a:active,
-        .sidebar-nav li a:focus {
-            text-decoration: none;
-        }
-
-        .sidebar-nav>.sidebar-brand {
-            height: 65px;
-            font-size: 18px;
-            line-height: 60px;
-        }
-
-        .sidebar-nav>.sidebar-brand a {
-            color: #999999;
-        }
-
-        .sidebar-nav>.sidebar-brand a:hover {
-            color: #fff;
-            background: none;
-        }
-
-        @media(min-width:1000px) {
-            #wrapper {
-                padding-left: 250px;
-            }
-
-            #wrapper.toggled {
-                padding-left: 0;
-            }
-
-            #sidebar-wrapper {
-                width: 250px;
-            }
-
-            #wrapper.toggled #sidebar-wrapper {
-                width: 0;
-            }
-
-            #page-content-wrapper {
-                padding: 20px;
-                position: relative;
-            }
-
-            #wrapper.toggled #page-content-wrapper {
-                position: relative;
-                margin-right: 0;
-            }
-        }
-.search-container {
-  float: right;
-}
-
- input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
- .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: rgb(255, 255, 255);
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-
-@media screen and (max-width: 100px) {
-   .search-container {
-    float: none;
-  }
-   a,  input[type=text],  .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  
-}
-img{
-    height: 60px;
-    width: 60px;
-}
-.lin{
-    margin-top:70px;
-}
-@media screen and (min-width: 992px) {
-      .info {
-        
-              margin-left: 20px;
-              margin-bottom: 20px;
-            }
-
-
-
-.info{
-  margin-left: 270px;
- margin-bottom: 50px;
-}
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lingerew Getie</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="shortcut icon" href="./image/hacker.JPG" type="image/x-icon">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light  sticky-top d-block d-sm-block d-md-block d-lg-none">
-        
-            <button class="btn btn-default" id="menu-toggle" type="button" data-toggle="collapse" data-target="#colNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-none d-block d-sm-block d-md-block d-lg-none">
 
-                <span class="navbar-toggler-icon"></span>
-          
-           </button>
-           <a class="navbar-brand" href="index.html">
-            <img src="./image/kido.JPG"> Linge G.
+    <button class="btn btn-default" id="menu-toggle" type="button" data-toggle="collapse" data-target="#colNav"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span>
+        <i class="fa fa-bars"></i>
+      </span>
+
+    </button>
+    <a class="navbar-brand" href="index.html">
+      <img src="./image/dan.JPG"> Linge G.
+    </a>
+    <div>
+      <form class="search sticky-top">
+        <div class="search__wrapper">
+          <div class="w-100vw h-100vh bg-secondary">
+
+          </div>
+          <input type="text" name="" placeholder="Search for..." class="search__field">
+          <a href="" type="submit" class="search__icon">
+            <i class="fa fa-search"></i>
           </a>
-      
-    
-        <div class="search-container sticky-top">
-            <form action="/action_page.php">
-              
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
-       
-    </nav>
-
-    <div id="wrapper">
-        <div class="search-container sticky-top d-none d-sm-none d-md-none d-lg-block">
-            <form action="/action_page.php">
-              
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper" class="sidebar-nav  d-lg-block" >
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="./image/kido.JPG">
-                      </a>
-                     <a href="">Linge G.</a> 
-                      
-                </li>
-                <div class="lin">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="Aboutme.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="Courses.html">Courses</a>
-                    </li>
-                    <li>
-                        <a href="#">Curriculum Vitea</a>
-                    </li>
-                </div>
-            </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
+      </form>
+    </div>
+  </nav>
 
-        <!-- Page Content -->
+  <div id="wrapper">
+    <form class="search sticky-top d-none d-sm-none d-md-none d-lg-block">
+      <div class="search__wrapper">
+        <div class="w-100vw h-100vh ">
 
-        <div>Currently I Am</div>              
-                <ul> ▪ Engineering Student at AAiT</ul>
-                <div>
-                  The AAiT (Formerly the College of Engineering) was established in 1953 by the Ministry of Education of Ethiopia,
-                and was housed in a set of building in the compound of School of Addis Ababa. Initially, only a two year
-                program of Intermediate Engineering studies was offered and students were subsequently sent abroad for the completion
-                of the student leading to a Bachelor of Science degree (B.Sc).
-                </div>
-          <div>Extra Curricular Skills</div>
-            
-              <div>
-               In addition to my accadamic achivments I have the following skills that I own throgh hard working 
-               <ul>▪ Goal keeper in football game </ul>
-               <ul>▪ Programm leader in meetings </ul>
-               <ul>▪ Advanced in electronic creativity works </ul>
-               <ul>▪ Motivation speaker </ul>
-               <ul>▪ Leadership skill </ul>
-              </div>
-              <div>Courses That I Have Taken Throgh My AAiT Life</div>
-            
-              <div>
-                I am studying Software Engineering in center of ITSC(Information Technology and Scientific Computing). 
-               In ITSC I have learned the following courses throgh two years life time.
-              </div>
-               <ul>🔽 First Year Second Semester
-                   <ul>▪ Introduction to Python Programming</ul>
-                   <ul>▪ Fundamentals of Information Technology</ul>
-                   <ul>▪ Fundamentals of Electric Circuit</ul>
-               </ul>
-               <ul>🔽 Second Year First Semester
-                   <ul>▪ OOP(Object Oriented Programming)</ul>
-                   <ul>▪ Fundamentals of Electronics</ul>
-                   <ul>▪ Discrete Mathematics</ul>
-                   <ul>▪ Datastructure and Algorithms</ul>
-                   <ul>▪ Fundamentals of Database</ul>
-               </ul>
-               <ul>🔽 Second Year Second Semester
-                   <ul>▪ Web Design and Development</ul>
-                   <ul>▪ Mobile Programming</ul>
-                   <ul>▪ Graphics and Multimedia</ul>
-                   <ul>▪ Fundamentals of Networking</ul>
-                   <ul>▪ Sofware Engineering</ul>
-               </ul>
-            <div>
-              Note: For first year first semester all AAiT students take the same caurses called "Pre-Engineering Common Courses".
-             This is why I am not mentioned first year first semester courses thar are given bt ITSC.
-            Students in ITSC take 5 courses every semester.In first year second semester two courses are given by other staffs and like that of pre-engineering courses I haven't mention them.
-            </div>
+        </div>
+        <input type="text" name="" placeholder="Search for..." class="search__field">
+
+        <a href="" type="submit" class="search__icon" >
+            <i class="fa fa-search"></i>
+        </a>
+      </div>
+    </form>
+    <!-- Sidebar -->
+    <a href="#">
+      <div id="sidebar-wrapper" class="sidebar-nav d-lg-block">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand d-none d-sm-none d-md-none d-lg-block">
+            <a class="image" href="index.html">
+              <img src="./image/dan.JPG">
+            </a>
+          </li>
+          <li class="d-none d-sm-none d-md-none d-lg-block"><a href="index.html" class="font-weight-light ling">Linge G.</a></li>
+
+          <div class="linkk">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="Aboutme.html">About Me</a>
+            </li>
+            <li>
+              <a href="Courses.html">Courses</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </a>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+
+    <div class="container">
+     
+      <div class="info">
+        <button type="button" class="btn"><i class="fa fa-info-circle"></i></button>
+      </div>
+      <footer class="footer">
+       
+          <div class="title"> Other Links</div>
+          <ul>
+          <li>Watching Movies
+            <a href="https://www.netflix.com/et/browse/genre/34399" class="entertain" target="_blank">Netflix</a>
+          </li>
+          <li>Video Games
+            <a href="https://freeonlinegamez.space/" class="entertain" target="_blank">Free Online Games</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
     <!-- /#wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
+      window.addEventListener("resize" , (e) => {
+        if(window.screen.availWidth > 768) {
+          let wrapper = document.querySelector("#wrapper")
+
+          if(wrapper.classList.contains("toggled")) {
+            wrapper.classList.remove("toggled")
+          }
+        }
+      })
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $(".info").css("left", "266px");
+        $(".info").css("bottom", "20px");
+        $(".container").css("left", "1px");
+      });
+      $('.search-button').click(function () {
+        $(this).parent().toggleClass('open');
+      });
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 100) {
+            $(".search").css("background", "black");
+            $(".search__icon").css("color", "white");
+            $(".navbar").css("background", "black");
+            $(".navbar-brand").css("background", "black");
+            $(".navbar-brand").css("color", "white");
+            $("#menu-toggle").css("color", "white");
+            $(".info").css("display", "none");
+            $(".info").css("transition-property", "ease-out");
+            $(".info").css("transition-duration", "5s");
+          }
+
+
+          else {
+            $(".search").css("background", "white");
+            $(".search__icon").css("color", "gray");
+            $(".navbar").css("background", "white");
+            $(".navbar-brand").css("background", "white");
+            $(".navbar-brand").css("color", "gray");
+            $("#menu-toggle").css("color", "black");
+            $(".info").css("display", "block");
+            $(".info").css("transition-property", "ease-in");
+            $(".info").css("transition-duration", "5");
+          }
+        })
+      })
     </script>
 
 </body>
-<div class="info fixed-bottom">
-  <button type="button" class="btn bg-light"><i class="fa fa-info-circle"></i></button>
-</div>
-
 </html>
